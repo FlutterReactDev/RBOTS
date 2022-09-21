@@ -1,0 +1,386 @@
+<html lang="en">
+    <!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.min.css?_v=20220824182831">
+    <link type="image/x-icon" href="img/favicon.svg" rel="shortcut icon">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js?_v=20220824182831"></script>
+    <title>RBOTS</title>
+</head>
+<body>
+<div class="wrapper">
+    <header>
+<nav class="navbar">
+    <div class="logo"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></div>
+    <ul class="navbar-list">
+        <li class="navbar-item"><a href="#">Мониторинг предложений</a></li>
+        <li class="navbar-item"><a href="#">Дневник P2P</a></li>
+        <li class="navbar-item"><a href="#" class="helpButton">Помощь</a></li>
+    </ul>
+    <div class="signIn">
+        <img src="img/icon-profile.svg" alt="profile" class="signIn-img">
+        <a href="#" data-sign="false" class="signIn-btn">Вход
+            <ul class="navbar__dropdown-list">
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                    <path d="M7.00016 7.43749C5.151 7.43749 3.646 5.93249 3.646 4.08332C3.646 2.23416 5.151 0.729156 7.00016 0.729156C8.84933 0.729156 10.3543 2.23416 10.3543 4.08332C10.3543 5.93249 8.84933 7.43749 7.00016 7.43749ZM7.00016 1.60416C5.63516 1.60416 4.521 2.71832 4.521 4.08332C4.521 5.44832 5.63516 6.56249 7.00016 6.56249C8.36516 6.56249 9.47933 5.44832 9.47933 4.08332C9.47933 2.71832 8.36516 1.60416 7.00016 1.60416Z" fill="white"/>
+                    <path d="M12.0109 13.2708C11.7718 13.2708 11.5734 13.0725 11.5734 12.8333C11.5734 10.8208 9.52009 9.1875 7.00009 9.1875C4.48009 9.1875 2.42676 10.8208 2.42676 12.8333C2.42676 13.0725 2.22842 13.2708 1.98926 13.2708C1.75009 13.2708 1.55176 13.0725 1.55176 12.8333C1.55176 10.3425 3.99592 8.3125 7.00009 8.3125C10.0043 8.3125 12.4484 10.3425 12.4484 12.8333C12.4484 13.0725 12.2501 13.2708 12.0109 13.2708Z" fill="white"/>
+                    </svg>Личный кабинет</a></li>
+                <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                    <path d="M7 9.1875C5.7925 9.1875 4.8125 8.2075 4.8125 7C4.8125 5.7925 5.7925 4.8125 7 4.8125C8.2075 4.8125 9.1875 5.7925 9.1875 7C9.1875 8.2075 8.2075 9.1875 7 9.1875ZM7 5.6875C6.27667 5.6875 5.6875 6.27667 5.6875 7C5.6875 7.72333 6.27667 8.3125 7 8.3125C7.72333 8.3125 8.3125 7.72333 8.3125 7C8.3125 6.27667 7.72333 5.6875 7 5.6875Z" fill="white"/>
+                    <path d="M8.87234 12.9442C8.74984 12.9442 8.62734 12.9267 8.50484 12.8975C8.14317 12.7983 7.83984 12.5708 7.64734 12.25L7.57734 12.1333C7.23317 11.5383 6.76067 11.5383 6.4165 12.1333L6.35234 12.2442C6.15984 12.5708 5.8565 12.8042 5.49484 12.8975C5.12734 12.9967 4.74817 12.9442 4.42734 12.7517L3.424 12.1742C3.06817 11.97 2.8115 11.6375 2.70067 11.235C2.59567 10.8325 2.64817 10.4183 2.85234 10.0625C3.0215 9.76501 3.06817 9.49667 2.969 9.3275C2.86984 9.15834 2.619 9.05917 2.27484 9.05917C1.42317 9.05917 0.729004 8.365 0.729004 7.51334V6.48667C0.729004 5.635 1.42317 4.94084 2.27484 4.94084C2.619 4.94084 2.86984 4.84167 2.969 4.6725C3.06817 4.50334 3.02734 4.235 2.85234 3.9375C2.64817 3.58167 2.59567 3.16167 2.70067 2.765C2.80567 2.3625 3.06234 2.03 3.424 1.82584L4.43317 1.24834C5.09234 0.857504 5.9615 1.085 6.35817 1.75584L6.42817 1.8725C6.77234 2.4675 7.24484 2.4675 7.589 1.8725L7.65317 1.76167C8.04984 1.085 8.919 0.857504 9.584 1.25417L10.5873 1.83167C10.9432 2.03584 11.1998 2.36834 11.3107 2.77084C11.4157 3.17334 11.3632 3.5875 11.159 3.94334C10.9898 4.24084 10.9432 4.50917 11.0423 4.67834C11.1415 4.8475 11.3923 4.94667 11.7365 4.94667C12.5882 4.94667 13.2823 5.64084 13.2823 6.4925V7.51917C13.2823 8.37084 12.5882 9.065 11.7365 9.065C11.3923 9.065 11.1415 9.16417 11.0423 9.33334C10.9432 9.5025 10.984 9.77084 11.159 10.0683C11.3632 10.4242 11.4215 10.8442 11.3107 11.2408C11.2057 11.6433 10.949 11.9758 10.5873 12.18L9.57817 12.7575C9.3565 12.88 9.11734 12.9442 8.87234 12.9442ZM6.99984 10.7858C7.519 10.7858 8.00317 11.1125 8.33567 11.69L8.39984 11.8008C8.46984 11.9233 8.5865 12.0108 8.7265 12.0458C8.8665 12.0808 9.0065 12.0633 9.12317 11.9933L10.1323 11.41C10.284 11.3225 10.4007 11.1767 10.4473 11.0017C10.494 10.8267 10.4707 10.6458 10.3832 10.4942C10.0507 9.9225 10.0098 9.33334 10.2665 8.88417C10.5232 8.435 11.054 8.17834 11.719 8.17834C12.0923 8.17834 12.3898 7.88084 12.3898 7.5075V6.48084C12.3898 6.11334 12.0923 5.81 11.719 5.81C11.054 5.81 10.5232 5.55334 10.2665 5.10417C10.0098 4.655 10.0507 4.06584 10.3832 3.49417C10.4707 3.3425 10.494 3.16167 10.4473 2.98667C10.4007 2.81167 10.2898 2.67167 10.1382 2.57834L9.129 2.00084C8.87817 1.84917 8.54567 1.93667 8.394 2.19334L8.32984 2.30417C7.99734 2.88167 7.51317 3.20834 6.994 3.20834C6.47484 3.20834 5.99067 2.88167 5.65817 2.30417L5.594 2.1875C5.44817 1.9425 5.1215 1.855 4.87067 2.00084L3.8615 2.58417C3.70984 2.67167 3.59317 2.8175 3.5465 2.9925C3.49984 3.1675 3.52317 3.34834 3.61067 3.5C3.94317 4.07167 3.984 4.66084 3.72734 5.11C3.47067 5.55917 2.93984 5.81584 2.27484 5.81584C1.9015 5.81584 1.604 6.11334 1.604 6.48667V7.51334C1.604 7.88084 1.9015 8.18417 2.27484 8.18417C2.93984 8.18417 3.47067 8.44084 3.72734 8.89C3.984 9.33917 3.94317 9.92834 3.61067 10.5C3.52317 10.6517 3.49984 10.8325 3.5465 11.0075C3.59317 11.1825 3.704 11.3225 3.85567 11.4158L4.86484 11.9933C4.98734 12.0692 5.13317 12.0867 5.26734 12.0517C5.40734 12.0167 5.524 11.9233 5.59984 11.8008L5.664 11.69C5.9965 11.1183 6.48067 10.7858 6.99984 10.7858Z" fill="white"/>
+                    </svg>Настройки</a></li>
+                <li><a href="logout/"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                    <path d="M12.9792 5.09834V8.90168C12.9792 11.7658 11.7542 12.9908 8.88999 12.9908H8.81416C6.22416 12.9908 4.97583 11.97 4.75999 9.68334C4.74249 9.45001 4.91749 9.22834 5.15666 9.20501C5.39583 9.18168 5.61166 9.35668 5.63499 9.60168C5.80416 11.4333 6.66749 12.1158 8.81999 12.1158H8.89583C11.27 12.1158 12.11 11.2758 12.11 8.90168V5.09834C12.11 2.72418 11.27 1.88418 8.89583 1.88418H8.81999C6.65583 1.88418 5.79249 2.57834 5.63499 4.44501C5.61166 4.68418 5.40166 4.86501 5.16249 4.84168C4.92333 4.81834 4.74249 4.61418 4.76583 4.36918C4.96416 2.04751 6.21833 1.00918 8.82583 1.00918H8.90166C11.7542 1.00918 12.9792 2.23418 12.9792 5.09834Z" fill="white"/>
+                    <path d="M9.18765 7C9.18765 7.23917 8.98932 7.4375 8.75015 7.4375H2.11182C1.87265 7.4375 1.67432 7.23917 1.67432 7C1.67432 6.76083 1.87265 6.5625 2.11182 6.5625H8.75015C8.98932 6.5625 9.18765 6.76083 9.18765 7Z" fill="white"/>
+                    <path d="M3.85017 5.04582C3.85017 5.15666 3.80934 5.26749 3.72184 5.35499L2.07684 6.99999L3.72184 8.64499C3.891 8.81416 3.891 9.09416 3.72184 9.26332C3.55267 9.43249 3.27267 9.43249 3.1035 9.26332L1.14934 7.30916C0.980169 7.13999 0.980169 6.85999 1.14934 6.69082L3.1035 4.73666C3.27267 4.56749 3.55267 4.56749 3.72184 4.73666C3.80934 4.81832 3.85017 4.93499 3.85017 5.04582Z" fill="white"/>
+                    </svg>Выход</a></li>
+            </ul>
+        </a>
+    </div>
+    <div class="menu">
+        <nav>
+            <li><a href="#">Мониторинг предложений</a></li>
+            <li><a href="#">Дневник P2P</a></li>
+            <li><a href="#" class="helpButton">Помощь</a></li>
+            <li><a href="#" data-sign="false" class="signIn-btn-burger">Вход
+                <ul class="navbar__dropdown-list-burger">
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <path d="M7.00016 7.43749C5.151 7.43749 3.646 5.93249 3.646 4.08332C3.646 2.23416 5.151 0.729156 7.00016 0.729156C8.84933 0.729156 10.3543 2.23416 10.3543 4.08332C10.3543 5.93249 8.84933 7.43749 7.00016 7.43749ZM7.00016 1.60416C5.63516 1.60416 4.521 2.71832 4.521 4.08332C4.521 5.44832 5.63516 6.56249 7.00016 6.56249C8.36516 6.56249 9.47933 5.44832 9.47933 4.08332C9.47933 2.71832 8.36516 1.60416 7.00016 1.60416Z" fill="white"/>
+                        <path d="M12.0109 13.2708C11.7718 13.2708 11.5734 13.0725 11.5734 12.8333C11.5734 10.8208 9.52009 9.1875 7.00009 9.1875C4.48009 9.1875 2.42676 10.8208 2.42676 12.8333C2.42676 13.0725 2.22842 13.2708 1.98926 13.2708C1.75009 13.2708 1.55176 13.0725 1.55176 12.8333C1.55176 10.3425 3.99592 8.3125 7.00009 8.3125C10.0043 8.3125 12.4484 10.3425 12.4484 12.8333C12.4484 13.0725 12.2501 13.2708 12.0109 13.2708Z" fill="white"/>
+                        </svg>Личный кабинет</a></li>
+                    <li><a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <path d="M7 9.1875C5.7925 9.1875 4.8125 8.2075 4.8125 7C4.8125 5.7925 5.7925 4.8125 7 4.8125C8.2075 4.8125 9.1875 5.7925 9.1875 7C9.1875 8.2075 8.2075 9.1875 7 9.1875ZM7 5.6875C6.27667 5.6875 5.6875 6.27667 5.6875 7C5.6875 7.72333 6.27667 8.3125 7 8.3125C7.72333 8.3125 8.3125 7.72333 8.3125 7C8.3125 6.27667 7.72333 5.6875 7 5.6875Z" fill="white"/>
+                        <path d="M8.87234 12.9442C8.74984 12.9442 8.62734 12.9267 8.50484 12.8975C8.14317 12.7983 7.83984 12.5708 7.64734 12.25L7.57734 12.1333C7.23317 11.5383 6.76067 11.5383 6.4165 12.1333L6.35234 12.2442C6.15984 12.5708 5.8565 12.8042 5.49484 12.8975C5.12734 12.9967 4.74817 12.9442 4.42734 12.7517L3.424 12.1742C3.06817 11.97 2.8115 11.6375 2.70067 11.235C2.59567 10.8325 2.64817 10.4183 2.85234 10.0625C3.0215 9.76501 3.06817 9.49667 2.969 9.3275C2.86984 9.15834 2.619 9.05917 2.27484 9.05917C1.42317 9.05917 0.729004 8.365 0.729004 7.51334V6.48667C0.729004 5.635 1.42317 4.94084 2.27484 4.94084C2.619 4.94084 2.86984 4.84167 2.969 4.6725C3.06817 4.50334 3.02734 4.235 2.85234 3.9375C2.64817 3.58167 2.59567 3.16167 2.70067 2.765C2.80567 2.3625 3.06234 2.03 3.424 1.82584L4.43317 1.24834C5.09234 0.857504 5.9615 1.085 6.35817 1.75584L6.42817 1.8725C6.77234 2.4675 7.24484 2.4675 7.589 1.8725L7.65317 1.76167C8.04984 1.085 8.919 0.857504 9.584 1.25417L10.5873 1.83167C10.9432 2.03584 11.1998 2.36834 11.3107 2.77084C11.4157 3.17334 11.3632 3.5875 11.159 3.94334C10.9898 4.24084 10.9432 4.50917 11.0423 4.67834C11.1415 4.8475 11.3923 4.94667 11.7365 4.94667C12.5882 4.94667 13.2823 5.64084 13.2823 6.4925V7.51917C13.2823 8.37084 12.5882 9.065 11.7365 9.065C11.3923 9.065 11.1415 9.16417 11.0423 9.33334C10.9432 9.5025 10.984 9.77084 11.159 10.0683C11.3632 10.4242 11.4215 10.8442 11.3107 11.2408C11.2057 11.6433 10.949 11.9758 10.5873 12.18L9.57817 12.7575C9.3565 12.88 9.11734 12.9442 8.87234 12.9442ZM6.99984 10.7858C7.519 10.7858 8.00317 11.1125 8.33567 11.69L8.39984 11.8008C8.46984 11.9233 8.5865 12.0108 8.7265 12.0458C8.8665 12.0808 9.0065 12.0633 9.12317 11.9933L10.1323 11.41C10.284 11.3225 10.4007 11.1767 10.4473 11.0017C10.494 10.8267 10.4707 10.6458 10.3832 10.4942C10.0507 9.9225 10.0098 9.33334 10.2665 8.88417C10.5232 8.435 11.054 8.17834 11.719 8.17834C12.0923 8.17834 12.3898 7.88084 12.3898 7.5075V6.48084C12.3898 6.11334 12.0923 5.81 11.719 5.81C11.054 5.81 10.5232 5.55334 10.2665 5.10417C10.0098 4.655 10.0507 4.06584 10.3832 3.49417C10.4707 3.3425 10.494 3.16167 10.4473 2.98667C10.4007 2.81167 10.2898 2.67167 10.1382 2.57834L9.129 2.00084C8.87817 1.84917 8.54567 1.93667 8.394 2.19334L8.32984 2.30417C7.99734 2.88167 7.51317 3.20834 6.994 3.20834C6.47484 3.20834 5.99067 2.88167 5.65817 2.30417L5.594 2.1875C5.44817 1.9425 5.1215 1.855 4.87067 2.00084L3.8615 2.58417C3.70984 2.67167 3.59317 2.8175 3.5465 2.9925C3.49984 3.1675 3.52317 3.34834 3.61067 3.5C3.94317 4.07167 3.984 4.66084 3.72734 5.11C3.47067 5.55917 2.93984 5.81584 2.27484 5.81584C1.9015 5.81584 1.604 6.11334 1.604 6.48667V7.51334C1.604 7.88084 1.9015 8.18417 2.27484 8.18417C2.93984 8.18417 3.47067 8.44084 3.72734 8.89C3.984 9.33917 3.94317 9.92834 3.61067 10.5C3.52317 10.6517 3.49984 10.8325 3.5465 11.0075C3.59317 11.1825 3.704 11.3225 3.85567 11.4158L4.86484 11.9933C4.98734 12.0692 5.13317 12.0867 5.26734 12.0517C5.40734 12.0167 5.524 11.9233 5.59984 11.8008L5.664 11.69C5.9965 11.1183 6.48067 10.7858 6.99984 10.7858Z" fill="white"/>
+                        </svg>Настройки</a></li>
+                    <li><a href="/logout"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="#fff">
+                        <path d="M12.9792 5.09834V8.90168C12.9792 11.7658 11.7542 12.9908 8.88999 12.9908H8.81416C6.22416 12.9908 4.97583 11.97 4.75999 9.68334C4.74249 9.45001 4.91749 9.22834 5.15666 9.20501C5.39583 9.18168 5.61166 9.35668 5.63499 9.60168C5.80416 11.4333 6.66749 12.1158 8.81999 12.1158H8.89583C11.27 12.1158 12.11 11.2758 12.11 8.90168V5.09834C12.11 2.72418 11.27 1.88418 8.89583 1.88418H8.81999C6.65583 1.88418 5.79249 2.57834 5.63499 4.44501C5.61166 4.68418 5.40166 4.86501 5.16249 4.84168C4.92333 4.81834 4.74249 4.61418 4.76583 4.36918C4.96416 2.04751 6.21833 1.00918 8.82583 1.00918H8.90166C11.7542 1.00918 12.9792 2.23418 12.9792 5.09834Z" fill="white"/>
+                        <path d="M9.18765 7C9.18765 7.23917 8.98932 7.4375 8.75015 7.4375H2.11182C1.87265 7.4375 1.67432 7.23917 1.67432 7C1.67432 6.76083 1.87265 6.5625 2.11182 6.5625H8.75015C8.98932 6.5625 9.18765 6.76083 9.18765 7Z" fill="white"/>
+                        <path d="M3.85017 5.04582C3.85017 5.15666 3.80934 5.26749 3.72184 5.35499L2.07684 6.99999L3.72184 8.64499C3.891 8.81416 3.891 9.09416 3.72184 9.26332C3.55267 9.43249 3.27267 9.43249 3.1035 9.26332L1.14934 7.30916C0.980169 7.13999 0.980169 6.85999 1.14934 6.69082L3.1035 4.73666C3.27267 4.56749 3.55267 4.56749 3.72184 4.73666C3.80934 4.81832 3.85017 4.93499 3.85017 5.04582Z" fill="white"/>
+                        </svg>Выход</a></li>
+                </ul>
+            </a></li>
+        </nav>
+    </div>
+    <div class="menu-btn">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+</nav>
+</header>
+    <main>
+        
+        <section class="trading-content">
+    <form action="" class="trading-content__convert-form ">
+        <div class="trading-content__exchange">
+            <div class="trading-content__input">
+                <div class="trading-content__give">
+                    <span>отдаёте</span>
+                    <br>
+                    <div class="trading-content__fiat">
+                        
+                    </div>
+                </div>
+                <div class="trading-content__arrows"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="22" viewBox="0 0 20 22">
+                    <path d="M19 5H1M19 5L15 9M19 5L15 1M1 17H19M1 17L5 21M1 17L5 13" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg></div>
+                <div class="trading-content__receive">
+                    <span>получаете</span>
+                    <br>
+                    <div class="trading-content__asset">
+
+                    </div>
+                </div>
+                <div class="trading-content__button-search">
+                    <a href="trade.html" class="trading-content__button block-button"><img src="img/search.svg" alt=""><p>поиск</p></a href="">
+                </div>
+            </div>
+        </div>
+        <div class="trading-content__popular-direction">
+            <h3>Популярные направления</h3>
+            <div class="trading-content__buttons flex">
+                <button class="trading-content__button-popular">RUB > USDT</button>
+                <button class="trading-content__button-popular">RUB > BTC</button>
+                <button class="trading-content__button-popular">USDT > BTC</button>
+                <button class="trading-content__button-popular">BTC > RUB</button>
+                <button class="trading-content__button-popular">USDT > BTC</button>
+                <button class="trading-content__button-popular">BTC > RUB</button>
+
+            </div>
+        </div>
+    </form>
+</section>
+        <section class="list-content">
+    <div class="list-content__title">0</div>
+    <div class="list-content__subtitle">
+        <p>Доступных предложений</p>
+        <img src="img/checkmark.svg" alt="checkmark">
+    </div>
+    <div class="list-content__row">
+        <table class="list-content__table" id="exchangesInfo">
+            <thead valign="center">
+                <tr class="list-content__column-title">
+                    <th>Платформа</th>
+                    <th>Кол-во предложений</th>
+                    <th>Доступный объём USDT</th>
+                    <th>Доступный объём RUB</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                
+            </tbody>
+        </table>
+        <div class="list-content__list">
+            <div class="list-content__item-mobile item-mobile">
+                <div class="list-content__title-mobile title-mobile">
+                    <div class="list-content__name-mobile name-mobile">Binance</div>
+                    <div class="list-content__offers-mobile offers-mobile">(154 768)</div>
+                    <div class="img-container"><img src="img/arrow-down.svg" alt="arrow-down"></div>
+                </div>
+                <div class="list-content__panel panel">
+                    <div class="list-content__volume-USDT-mobile title">Объём USDT
+                        <div class="list-content__volume-USDT-mobile-count">632 784 USDT</div>
+                    </div>
+                    <div class="list-content__volume-RUB-mobile title">Объём RUB
+                        <div class="list-content__volume-RUB-mobile-count">6 784 482 RUB</div>
+                    </div>
+                    <div class="list-content__offers title">Кол-во предложений
+                        <div class="list-content__offers-mobile-count">154 768</div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-content__item-mobile item-mobile">
+                <div class="list-content__title-mobile title-mobile">
+                    <div class="list-content__name-mobile name-mobile">Binance</div>
+                    <div class="list-content__offers-mobile offers-mobile">(154 768)</div>
+                    <div class="img-container"><img src="img/arrow-down.svg" alt="arrow-down"></div>
+                </div>
+                <div class="list-content__panel panel">
+                    <div class="list-content__volume-USDT-mobile title">Объём USDT
+                        <div class="list-content__volume-USDT-mobile-count">632 784 USDT</div>
+                    </div>
+                    <div class="list-content__volume-RUB-mobile title">Объём RUB
+                        <div class="list-content__volume-RUB-mobile-count">6 784 482 RUB</div>
+                    </div>
+                    <div class="list-content__offers title">Кол-во предложений
+                        <div class="list-content__offers-mobile-count">154 768</div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-content__item-mobile item-mobile">
+                <div class="list-content__title-mobile title-mobile">
+                    <div class="list-content__name-mobile name-mobile">Binance</div>
+                    <div class="list-content__offers-mobile offers-mobile">(154 768)</div>
+                    <div class="img-container"><img src="img/arrow-down.svg" alt="arrow-down"></div>
+                </div>
+                <div class="list-content__panel panel">
+                    <div class="list-content__volume-USDT-mobile title">Объём USDT
+                        <div class="list-content__volume-USDT-mobile-count">632 784 USDT</div>
+                    </div>
+                    <div class="list-content__volume-RUB-mobile title">Объём RUB
+                        <div class="list-content__volume-RUB-mobile-count">6 784 482 RUB</div>
+                    </div>
+                    <div class="list-content__offers title">Кол-во предложений
+                        <div class="list-content__offers-mobile-count">154 768</div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <section class="faq">
+    <div class="faq__title-container">
+        <div class="faq__title" id="faq">FAQ</div>
+    </div>
+    <button class="faq__accordion">1. Как пользоваться?<img src="img/plus.svg" alt="plus"></button>
+    <div class="faq__panel">
+        <p>Пользователь вводит в поле «отдаете» национальную валюту страны (например, <span>RUB</span> – российский рубль), в поле «получаете» – желаемую криптовалюту (например, <span>BTC – биткойн</span>).</p>
+        <br>
+        <p>После нажатия «искать предложения» выводятся все предложения по желаемой криптовалюте за указанную национальную валюту. При нажатии на конкретное предложение пользователь переходит на cтраницу с этим предложением на <span>P2P-платформе</span> или частном обменнике.</p>
+        <br>
+    </div>
+
+    <button class="faq__accordion">2. Что делает сервис?<img src="img/plus.svg" alt="plus"></button>
+    <div class="faq__panel">
+        <p>Lorem ipsum...</p>
+        <br>
+    </div>
+
+    <button class="faq__accordion">3. Я хотел бы сотрудничать с вами.<img src="img/plus.svg" alt="plus"></button>
+    <div class="faq__panel">
+        <p>Lorem ipsum...</p>
+        <br>
+    </div>
+</section>
+        <div id="myModal" class="modal">
+
+    <!-- Модальное содержание -->
+    <div class="modal-content" data-content="reg">
+        <span class="close">
+            <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L13 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M13 1L1.00001 13" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg></span>
+        <form action="." class="sign-in-form" method="POST">
+            <div class="sign-in-form__content">
+                <div class="sign-in-form__text">
+                    <div class="sign-in-form__title">Добро<br>пожаловать</div>
+                    <div class="sign-in-form__subtitle">Пожалуйста авторизируйтесь</div>
+                </div>
+                <input type="login" name="username_signin" required id="id_username_signin" class="sign-in-form__input" placeholder="Введите логин">
+                <input type="password" name="password_signin" required id="id_password_signin" class="sign-in-form__input" placeholder="Введите пароль">
+                <label type="password"><a href="#">Забыли пароль?</a></label>
+                <p class="sign-in-form__error"></p>
+                <button type="submit" id="loginButton" value="Log-in">Войти</button>
+                <div class="sign-in-form__link"><a href="#">Зарегистрироваться</a></div>
+            </div>
+        </form>
+
+        <form action="." class="register-form none" method="POST">
+            <div class="register-form__content">
+                <div class="register-form__text">
+                    <div class="register-form__title">Регистрация</div>
+                    <div class="register-form__link"><a href="#"><img src="img/arrowBack.svg" alt="arrowBack"> Вернуться</a></div>
+                </div>
+                <div class="register-form__inputs">
+                    <input type="login" name="username" required id="id_username" class="register-form__input" placeholder="Введите логин">
+                    <input type="email" name="email" required id="id_email" class="register-form__input" placeholder="Введите email">
+                    <input type="password" name="password" required id="id_password" class="register-form__input" placeholder="Введите пароль">
+                    <input type="password" name="password2" required id="id_password2" class="register-form__input" placeholder="Повторите пароль">
+                    <p class="register-form__error"></p>
+                    <button type="submit" id="registerButton">Зарегистрироваться</button>
+                </div>
+            </div>
+        </form>
+        <form action="." class="currencies-form none" method="POST">
+    <div class="currencies__title">Выбор валюты</div>
+    <div class="currencies__row">
+        <div class="currencies__search"><input type="search" placeholder="Поиск"><img src="img/search-small.svg" alt="search-small"></div>
+        <div class="currencies__cryptocurrency">Криптовалюты:
+
+        </div>
+        <div class="currencies__category">
+            <ul class="currencies__list">Категории:
+                <li class="currencies__item">криптовалюты</li>
+                <li class="currencies__item">Валюта</li>
+                <li class="currencies__item">Все</li>
+            </ul>
+        </div>
+        <div class="currencies__cryptocurrency-choice">
+            <div class="currencies__item-choice" id="asset">RUB</div>
+            <div class="currencies__item-choice" id="fiat">USDT</div>
+        </div>
+    </div>
+</form>
+        <form action="#" class="filter-form">
+    <div class="filter-form__filter-title">фильтр
+        <a href="#">Очистить все</a>
+    </div>
+    <div class="filter-form__search-input">
+        <input type="search" placeholder="Поиск">
+        <div class="dropdown-filter">
+            <a class="dropdown-item" href="#" id="qiwi-dropdown">qiwi</a>
+            <a class="dropdown-item" href="#" >bank</a>
+            <a class="dropdown-item" href="#" >zxc</a>
+            <a class="dropdown-item" href="#" >dfg</a>
+            <a class="dropdown-item" href="#" >asd</a>
+        </div>
+    </div>
+    <div class="filter-form__payments">
+        <button class="filter-form__payments-title filter-button">Онлайн-платежи<img src="img/arrow-down.svg" alt="arrow-down"></button>
+        <div class="filter-form__panel-filter">
+            <label class="checkbox-ios" id="qiwi-checkbox">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+        </div>
+    </div>
+
+    <div class="filter-form__limits">
+        <div class="filter-form__limits-title">Лимиты сделки</div>
+        <div class="filter-form__limits-inputs">
+            <label for="">От:</label>
+            <input type="number" class="filter-form__limits-input" placeholder="0"></input>
+            <label for="">До:</label>
+            <input type="number" class="filter-form__limits-input" placeholder="10 000"></input>
+        </div>
+    </div>
+
+    <div class="filter-form__platforms">
+        <button class="filter-form__platforms-title filter-button">Платформы<img src="img/arrow-down.svg" alt="arrow-down"></button>
+        <div class="filter-form__panel-filter">
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Binance</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+            <label class="checkbox-ios">
+                <input type="checkbox">
+                <span class="checkbox-ios-switch"></span>
+                <p>Qiwi</p> <span class="filter-form__count">(345)</span>
+            </label>
+        </div>
+    </div>
+</form>
+    </div>
+  
+</div>
+    </main>
+    <footer class="footer">
+    <ul class="footer__list">
+        <li class="footer__item"><a href="index.html"><img src="img/logo.svg" alt="logo"></a></li>
+        <li class="footer__item"><span>314 000</span> доступных предложения</li>
+        <li class="footer__item">«RBOTS» © 2022</li>
+    </ul>
+</footer>
+</div>
+<script src="./js/app.min.js?_v=20220824182831"></script>
+</body>
+</div>
+</html>
